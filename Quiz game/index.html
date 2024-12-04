@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KBC Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container" id="playerSetup">
+        <h1>Add Players</h1>
+        <input type="text" id="playerNameInput" placeholder="Enter Player Name">
+        <button onclick="addPlayer()">Add Player</button>
+        <ul id="playerList"></ul>
+        <button onclick="startGame()">Start Game</button>
+    </div>
+
+    <div class="container hidden" id="gameArea">
+        <h1 id="currentPlayer">Player's Turn</h1>
+        <p id="questionText"></p>
+        <div id="options"></div>
+    </div>
+
+    <div class="container hidden" id="scoreBoard">
+        <h1>Scoreboard</h1>
+        <ul id="scoreList"></ul>
+    </div>
+
+    <div class="container hidden" id="resultArea">
+        <h1>Game Over</h1>
+        <p id="resultText"></p>
+        <button onclick="window.location.reload()">Restart Game</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    
+    <script src="script.js"></script>
+</body>
+</html>
